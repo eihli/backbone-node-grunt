@@ -4,6 +4,13 @@ class window.AppView extends Backbone.View
 
   initialize: ->
     console.log 'initializing'
+    # form = '
+    #   <form>
+    #     <input type="text">
+    #     <input class="submit" type="button">
+    #   </form>
+    # '
+    # @$el.append(form);
     @render()
 
   render: ->
