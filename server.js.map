@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "server.js",
+  "sourceRoot": "",
+  "sources": [
+    "server.coffee"
+  ],
+  "names": [],
+  "mappings": "AAAA;AAAA,MAAA;;EAAA,IAAA,GAAO,OAAA,CAAQ,MAAR;;EACP,IAAA,GAAO;;EACP,aAAA,GAAgB,SAAC,GAAD,EAAM,GAAN;WACd,GAAG,CAAC,GAAJ,CAAQ,UAAR;EADc;;EAGhB,MAAA,GAAS,IAAI,CAAC,YAAL,CAAkB,aAAlB;;EAET,MAAM,CAAC,MAAP,CAAc,IAAd,EAAoB,SAAA;WAClB,OAAO,CAAC,GAAR,CAAY,2BAAA,GAA8B,IAA1C;EADkB,CAApB;AAPA"
+}
