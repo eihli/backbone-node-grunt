@@ -1,0 +1,20 @@
+{
+  "name": "back",
+  "version": "0.0.0",
+  "authors": [
+    "Eric Ihli <ericihli@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "backbone": "~1.2.0",
+    "jquery": "~2.1.4",
+    "underscore": "~1.8.3"
+  }
+}
