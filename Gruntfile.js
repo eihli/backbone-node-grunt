@@ -66,7 +66,7 @@ module.exports = function(grunt) {
         tasks: ['jshint:lib_test', 'qunit']
       },
       coffee: {
-        files: ['src/**/*.coffee', 'server.coffee'],
+        files: ['src/**/*.coffee', 'server.coffee', 'spikes/*.coffee'],
         tasks: 'coffee'
       }
     },
@@ -77,7 +77,8 @@ module.exports = function(grunt) {
         },
         files: {
           'dist/app.js': ['src/**/*.coffee'],
-          'server.js': ['server.coffee']
+          'server.js': ['server.coffee'],
+          'spikes/fileserver.js': ['spikes/fileserver.coffee']
         }
       }
     }

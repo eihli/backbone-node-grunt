@@ -15,17 +15,28 @@
     var filename, uri;
     uri = url.parse(req.url).pathname;
     filename = path.join(process.cwd(), uri);
+    if (fs.statSync(filename).isDirectory()) {
+      filename += 'dist/index.html';
+    }
+    console.log(req.url);
+    if (req.url.match('/favicon\.ico')) {
+      req.writeHead(200, {
+        'Content-Type': 'image/xicon'
+      });
+      req.end();
+    }
     fs.exists(filename, function(exists) {
       if (!exists) {
         res.writeHead(404);
-        res.end();
+        res.end("file doesn't exist");
       }
     });
-    if (fs.statSync(filename).isDirectory()) {
-      filename += 'index.html';
-    }
-    console.log(uri);
-    return fs.readFile(filename, function(err, data) {
+    return fs.readFile(filename, {
+      encoding: 'utf8'
+    }, function(err, data) {
+      if (err) {
+        console.log(err);
+      }
       console.log(filename);
       return res.end(data);
     });
