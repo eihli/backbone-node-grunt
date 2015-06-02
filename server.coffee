@@ -1,7 +1,11 @@
 http = require 'http'
+fs = require 'fs'
 port = 8080
 handleRequest = (req, res) ->
-  res.end('it works')
+  fs.readFile('./dist/index.html', (err, data) ->
+    if err then throw err
+    res.end(data)
+  )
 
 server = http.createServer(handleRequest)
 

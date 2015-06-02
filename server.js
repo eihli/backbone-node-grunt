@@ -1,12 +1,19 @@
 (function() {
-  var handleRequest, http, port, server;
+  var fs, handleRequest, http, port, server;
 
   http = require('http');
+
+  fs = require('fs');
 
   port = 8080;
 
   handleRequest = function(req, res) {
-    return res.end('it works');
+    return fs.readFile('./dist/index.html', function(err, data) {
+      if (err) {
+        throw err;
+      }
+      return res.end(data);
+    });
   };
 
   server = http.createServer(handleRequest);
